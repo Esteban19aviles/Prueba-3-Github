@@ -1,11 +1,38 @@
+.container-grid {
+  display: grid;
+  grid-template-areas:
+  "navbar"
+  "aside main"
+  "fotter fotter";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
 
-body {
-  background-color: #f8f9fa;
+.navbar {
+  grid-area: navbar;
+  background-color: coral;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
-aside ul {
-  list-style-type: none;
-  padding-left: 0;
+
+.aside {
+  grid-area: aside;
+  background-color: blue;
+  padding: 1rem;
+  border-right: 1px solid;
 }
-aside ul li {
-  margin-bottom: 0.5rem;
+
+.main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+.fotter {
+  grid-area: fotter;
+  background-color: white;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
